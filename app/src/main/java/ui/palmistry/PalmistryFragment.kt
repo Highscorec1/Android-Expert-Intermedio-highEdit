@@ -7,7 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.ciberseguridadapp.R
 import com.example.ciberseguridadapp.databinding.FragmentPalmistryBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 
 class PalmistryFragment : Fragment() {
 

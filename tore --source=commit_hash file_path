@@ -1,0 +1,35 @@
+[33mcommit fe8cbe51000cee84d896af449d6becf0e68343ec[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mbotomNavHoroscope[m[33m, [m[1;32mmaster[m[33m)[m
+Author: Highscorec <geovajoel20@gmail.com>
+Date:   Mon Jul 1 05:22:16 2024 -0500
+
+    add ClickOnListItems
+
+[33mcommit db0d5a7c340c5ccb56fe582b5cc41605c607f0e5[m
+Author: Highscorec <geovajoel20@gmail.com>
+Date:   Sat Jun 29 10:12:39 2024 -0500
+
+    add RviewHoroscope
+
+[33mcommit 19b398f5741527850d96a9d671643e4a982b647c[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: Highscorec <geovajoel20@gmail.com>
+Date:   Sat Jun 29 07:23:54 2024 -0500
+
+    dependencias bien
+
+[33mcommit f1adfe18ff119e0ed2bfb3f5f3c6ca48e3dead1c[m
+Author: Highscorec <geovajoel20@gmail.com>
+Date:   Sat Jun 29 07:02:23 2024 -0500
+
+    add dependencias
+
+[33mcommit d569fdc9d4a5151f5cbd81b18c1ea5f4b7b05b2d[m
+Author: Highscorec <geovajoel20@gmail.com>
+Date:   Fri Jun 28 07:05:33 2024 -0500
+
+    add toolbar
+
+[33mcommit 5ba7a09c1d6e03c7e2aa7f7548fc05c2d0feed6e[m
+Author: Highscorec <geovajoel20@gmail.com>
+Date:   Fri Jun 28 05:13:22 2024 -0500
+
+    initial commit

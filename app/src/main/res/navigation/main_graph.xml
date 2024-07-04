@@ -26,6 +26,7 @@
         tools:layout="@layout/fragment_palmistry" />
     <activity
         android:id="@+id/horoscopeDetailActivity"
-        android:name="ui.detail.HoroscopeDetailActivity"
-        android:label="HoroscopeDetailActivity" />
+        android:name="ui.horoscope.adapter.HoroscopeDetailActivity"
+        android:label="activity_horoscope_detail"
+        tools:layout="@layout/activity_horoscope_detail" />
 </navigation>

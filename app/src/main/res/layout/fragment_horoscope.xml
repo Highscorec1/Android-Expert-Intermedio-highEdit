@@ -9,6 +9,11 @@ tools:context="ui.horoscope.HoroscopeFragment">
 <androidx.recyclerview.widget.RecyclerView
     android:id="@+id/rvHoroscope"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"/>
+    android:layout_height="match_parent"
+    android:layout_marginBottom="0dp"
+    android:paddingBottom="80dp"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    />
 
 </FrameLayout>

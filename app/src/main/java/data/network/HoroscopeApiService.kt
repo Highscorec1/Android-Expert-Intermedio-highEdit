@@ -9,5 +9,5 @@ interface HoroscopeApiService {
 
     @GET ("/{sign}")
 
-    suspend fun getHoroscope(@Path("sing") sign:String): PredictionResponse
+    suspend fun getHoroscope(@Path("sign") sign:String): PredictionResponse
 }

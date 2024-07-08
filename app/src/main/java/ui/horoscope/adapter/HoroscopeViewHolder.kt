@@ -23,7 +23,7 @@ class HoroscopeViewHolder (view: View) : RecyclerView.ViewHolder(view) {
 
     private fun startRotationAnimation(view:View, newLambda:()->Unit){
         view.animate().apply {
-            duration = 500
+            duration = 250
             interpolator = LinearInterpolator()
             rotationBy(360f)
             withEndAction { newLambda() }

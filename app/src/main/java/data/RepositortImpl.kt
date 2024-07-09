@@ -2,7 +2,6 @@ package data.providers
 
 import android.util.Log
 import data.providers.network.HoroscopeApiService
-import data.providers.network.response.PredictionResponse
 import domain.Repository
 import domain.model.PredictionModel
 import javax.inject.Inject

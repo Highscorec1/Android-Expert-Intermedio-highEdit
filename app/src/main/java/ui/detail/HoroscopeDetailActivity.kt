@@ -8,8 +8,11 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.navArgs
+import com.example.ciberseguridadapp.R
 import com.example.ciberseguridadapp.databinding.ActivityHoroscopeDetailBinding
 import dagger.hilt.android.AndroidEntryPoint
+import domain.model.HoroscopeModel
+import domain.model.HoroscopeModel.*
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
@@ -26,14 +29,17 @@ class HoroscopeDetailActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         initUi()
-
-
-        horoscopeDetailViewModel.getHoroscope(args.type.name)
+        horoscopeDetailViewModel.getHoroscope(args.type)
 
     }
 
     private fun initUi() {
+        initListeners()
         initUiState()
+    }
+
+    private fun initListeners(){
+        binding.ivBack.setOnClickListener { onBackPressed() }
     }
 
     //enganchar a un estado flow que esta en el viewModel
@@ -69,5 +75,23 @@ class HoroscopeDetailActivity : AppCompatActivity() {
         binding.ProgressBAR.isVisible = false
         binding.tvTitle.text = state.sign
         binding.tvBody.text = state.prediction
+
+
+        val image = when (state.horoscopeModel) {
+            Aries -> R.drawable.detail_aries
+            Taurus -> R.drawable.detail_taurus
+            Gemini -> R.drawable.detail_gemini
+            Cancer -> R.drawable.detail_cancer
+            Leo -> R.drawable.detail_leo
+            Virgo -> R.drawable.detail_virgo
+            Libra -> R.drawable.detail_libra
+            Scorpio -> R.drawable.detail_scorpio
+            Sagittarius -> R.drawable.detail_sagittarius
+            Capricorn -> R.drawable.detail_capricorn
+            Aquarius -> R.drawable.detail_aquarius
+            Pisces -> R.drawable.detail_pisces
+        }
+
+        binding.ivDetail.setImageResource(image)
     }
 }

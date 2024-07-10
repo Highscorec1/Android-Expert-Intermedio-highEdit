@@ -3,6 +3,7 @@ package ui.detail
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import domain.model.HoroscopeModel
 import domain.usecae.GetPrediction
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -17,13 +18,18 @@ class HoroscopeDetailViewModel @Inject constructor(private val getPrediction: Ge
     private var _state = MutableStateFlow<HoroscopeDetailState>(HoroscopeDetailState.Loading)
     val state:StateFlow<HoroscopeDetailState> = _state
 
-    fun getHoroscope(sign:String) {
+    lateinit var horoscope:HoroscopeModel
+
+    fun getHoroscope(sign: HoroscopeModel) {
+
+        horoscope = sign
+
         viewModelScope.launch {
             _state.value = HoroscopeDetailState.Loading
-            val result = withContext((Dispatchers.IO)){getPrediction(sign)} //hilo secundario
+            val result = withContext((Dispatchers.IO)){getPrediction(sign.name)} //hilo secundario
 
             if(result !=null){
-                _state.value = HoroscopeDetailState.Success(result.horoscope, result.sing)
+                _state.value = HoroscopeDetailState.Success(result.horoscope, result.sing, horoscope)
             }else {
 
                 _state.value = HoroscopeDetailState.Error("Ha ocurrido un errror, intentelo mas tarde")
